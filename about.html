@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+    <style>
+        /* Cài đặt phông nền với màu xanh dương nhẹ và gradient */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #a0c4ff, #f0f8ff); /* Gradient màu xanh da trời */
+            color: #1e3a5f; /* Màu chữ chính */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Phần header có hiệu ứng bong bóng */
+        header {
+            background-color: rgba(135, 206, 250, 0.8); /* Màu xanh bầu trời trong suốt */
+            padding: 30px;
+            text-align: center;
+            border-bottom: 2px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ nhẹ */
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2.8em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        /* Menu điều hướng */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.3em;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347; /* Màu đỏ cam khi hover */
+        }
+
+        /* Phần nội dung giới thiệu */
+        #about {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9); /* Màu nền trắng trong suốt */
+            border-radius: 12px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        #about h2 {
+            color: #1e3a5f;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #3e4b60;
+            margin-bottom: 30px;
+        }
+
+        #about img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Phần footer */
+        footer {
+            background-color: rgba(135, 206, 250, 0.8); /* Màu xanh bầu trời trong suốt */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Hiệu ứng bong bóng nhẹ cho các phần tử */
+        h1, h2, p {
+            position: relative;
+        }
+
+        h1::after, h2::after, p::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(135, 206, 250, 0.3);
+            width: 20px;
+            height: 20px;
+            animation: bubble 3s infinite;
+        }
+
+        h1::after {
+            top: 10px;
+            left: 50%;
+            animation-delay: 0s;
+        }
+
+        h2::after {
+            top: 20px;
+            left: 55%;
+            animation-delay: 1s;
+        }
+
+        p::after {
+            top: 40px;
+            left: 50%;
+            animation-delay: 2s;
+        }
+
+        /* Animation bong bóng */
+        @keyframes bubble {
+            0% {
+                transform: translateY(0) scale(0.5);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(-10px) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-20px) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Làng nghề truyền thống Bến Tre</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="product.html">Sản phẩm</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Giới thiệu về làng nghề truyền thống</h2>
+        <p>Bến Tre nổi tiếng với các làng nghề truyền thống, góp phần tạo nên bản sắc văn hóa đặc sắc của vùng đất này. Những làng nghề truyền thống ở Bến Tre chủ yếu tập trung vào việc chế tác sản phẩm từ nguyên liệu tự nhiên sẵn có, như dừa, tre, mây, gỗ, và vỏ dừa. Các sản phẩm làm ra không chỉ có giá trị sử dụng cao mà còn mang đậm nét nghệ thuật và tính thẩm mỹ.</p>
+
+        <p>Một trong những nghề nổi bật là nghề chế biến sản phẩm từ dừa. Với đặc thù là xứ dừa, Bến Tre đã phát triển nhiều sản phẩm từ dừa như nước dừa, cùi dừa khô, dầu dừa, và các sản phẩm thủ công mỹ nghệ từ vỏ dừa như tượng, đồ trang trí, quà lưu niệm. Đây không chỉ là nguồn thu nhập chính cho người dân mà còn góp phần phát triển kinh tế địa phương.</p>
+
+        <p>Ngoài ra, nghề đan lát tre cũng là một đặc sản của Bến Tre. Người dân nơi đây sử dụng tre và mây để tạo ra các sản phẩm như giỏ, rổ, nón, thúng, bàn ghế, và nhiều đồ dùng khác. Những sản phẩm này không chỉ bền đẹp mà còn thể hiện sự khéo léo và sáng tạo của người thợ.</p>
+
+        <p>Nghề gốm cũng là một ngành nghề truyền thống nổi bật tại Bến Tre, với các sản phẩm như chén bát, bình, lọ, tượng đất sét. Các sản phẩm gốm Bến Tre được biết đến với sự tinh xảo và độc đáo, là một phần không thể thiếu trong đời sống của người dân.</p>
+
+        <p>Những làng nghề này không chỉ đóng góp vào nền kinh tế địa phương mà còn giúp bảo tồn và phát huy các giá trị văn hóa truyền thống, tạo ra sản phẩm mang đậm dấu ấn bản địa. Đồng thời, chúng cũng thu hút khách du lịch đến tham quan và tìm hiểu, tạo ra cơ hội phát triển du lịch và xuất khẩu sản phẩm thủ công mỹ nghệ.</p>
+        <video width="640" height="360" controls>
+        <source src="video/langnghe.mp4" type="video/mp4">
+        </video>
+
+    </section>
+
+    <footer>
+        <p>&copy; Làng nghề truyền thống  Bến Tre </p>
+    </footer>
+</body>
+</html>

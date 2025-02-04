@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làng nghề truyền thống Bến Tre</title>
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', serif;
+            background-color: #f4f4f4;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #27ae60;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid #2c3e50;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            font-family: 'Arial', serif;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            padding: 0;
+        }
+        nav li {
+            margin: 0 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Arial', serif;
+            padding: 5px 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: white;
+            color: #27ae60;
+            border-color: #27ae60;
+        }
+
+        /* Hero Section Styles */
+        section.hero {
+            background: url('images/hero_bg.jpg') no-repeat center center;
+            background-size: cover;
+            color: deeppink;
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+        }
+        section.hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-family: 'Arial', serif;
+        }
+        section.hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            font-family: 'Arial', serif;
+        }
+        section.hero a {
+            background-color: #27ae60;
+            color: lightpink;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: inline-block;
+            border: 2px solid #27ae60;
+            transition: all 0.3s ease;
+        }
+        section.hero a:hover {
+            background-color: white;
+            color: #27ae60;
+        }
+
+        /* Handicraft Section Styles */
+        section.handicrafts {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #ffffff;
+            border-top: 3px solid #27ae60;
+        }
+        section.handicrafts h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #27ae60;
+            font-family: 'Arial', serif;
+        }
+        section.handicrafts .items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        section.handicrafts .item {
+            width: 30%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border: 2px solid #27ae60;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        section.handicrafts .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+        }
+        section.handicrafts .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        section.handicrafts .item img:hover {
+            transform: scale(1.05);
+        }
+        section.handicrafts .item h3 {
+            font-size: 24px;
+            color: #27ae60;
+            font-family: 'Arial', serif;
+        }
+        section.handicrafts .item p {
+            font-size: 16px;
+            color: #555;
+            font-family: 'Arial', serif;
+        }
+
+        /* Experience Section Styles */
+        section.experience {
+            background-color: #27ae60;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 3px solid #2c3e50;
+        }
+        section.experience h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-family: 'Arial', serif;
+        }
+        section.experience a {
+            background-color: white;
+            color: #27ae60;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: 2px solid #27ae60;
+            transition: all 0.3s ease;
+        }
+        section.experience a:hover {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer p {
+            font-size: 14px;
+            font-family: 'Arial', serif;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Làng nghề truyền thống Bến Tre</h1>
+        <nav>
+            <ul>
+                <li><a href="product.html">Sản phẩm</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Khám Phá Làng Nghề Truyền Thống Bến Tre</h2>
+            <p>Chào mừng bạn đến với thế giới của những sản phẩm thủ công truyền thống độc đáo, tạo nên từ những đôi tay khéo léo của người dân Bến Tre...</p>
+            <a href="https://www.ivivu.com/blog/2022/12/top-5-lang-nghe-truyen-thong-ben-tre-an-tuong-thu-hut-du-khach/">Khám Phá Ngay</a>
+        </section>
+
+        <section class="handicrafts">
+            <h2>Những Nghề Thủ Công Đặc Trưng</h2>
+            <div class="items">
+                <div class="item">
+                    <h3>Gốm Sứ</h3>
+                    <img src="img/gomsu.jpg" alt="Gốm sứ Bến Tre">
+                    <p>Những sản phẩm gốm sứ tinh xảo được làm thủ công, mang đậm bản sắc văn hóa của vùng đất Bến Tre.</p>
+                </div>
+                <div class="item">
+                    <h3>Đan Tre</h3>
+                    <img src="img/dantre.jpg" alt="Đan tre Bến Tre">
+                    <p>Những sản phẩm từ tre, nứa truyền thống được làm với sự tỉ mỉ và sáng tạo của những người thợ.</p>
+                </div>
+                <div class="item">
+                    <h3>Đồ Thủ Công Mỹ Nghệ</h3>
+                    <img src="img/dothucongmynghe.jpg" alt="Đồ thủ công mỹ nghệ Bến Tre">
+                    <p>Chất liệu tự nhiên kết hợp với kỹ thuật thủ công tạo nên những sản phẩm mỹ nghệ độc đáo, mang đậm dấu ấn văn hóa dân gian.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience">
+            <h2>Trải nghiệm nghề truyền thống tại Bến Tre</h2>
+            <a href="about.html">Tìm Hiểu Thêm</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Làng nghề truyền thống Bến Tre. Tất cả các quyền được bảo lưu.</p>
+    </footer>
+
+</body>
+</html>

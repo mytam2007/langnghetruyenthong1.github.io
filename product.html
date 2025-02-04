@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <style>
+        /* Cài đặt cho toàn bộ trang */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8bbd0; /* Nền màu hồng sáng */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding-bottom: 60px; /* Đảm bảo footer không che mất nội dung */
+            overflow-x: hidden;
+        }
+
+        /* Cài đặt cho header */
+        header {
+            background-color: #e91e63; /* Màu hồng đậm cho header */
+            color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Cài đặt cho phần sản phẩm */
+        #products {
+            padding: 100px 20px 40px; /* Tạo khoảng cách cho header cố định */
+            text-align: center;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 80px;
+        }
+
+        #products h2 {
+            font-size: 2.5em;
+            color: #e91e63;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            animation: bounce 0.6s ease;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin-top: 15px;
+            font-size: 1.6em;
+            color: #e91e63;
+        }
+
+        .product p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .cta-button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #d81b60;
+        }
+
+        /* Cài đặt cho footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        /* Thêm hiệu ứng động khi cuộn vào sản phẩm */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hiệu ứng bounce khi hover vào sản phẩm */
+        @keyframes bounce {
+            0% {
+                transform: scale(1.05);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
+
+        ol {
+            text-align: left;
+            margin-top: 10px;
+            padding-left: 20px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        ol p {
+            margin: 5px 0;
+        }
+
+        /* Thêm hiệu ứng cho link "Xem thêm" */
+        a {
+            text-decoration: none;
+            color: #e91e63;
+            font-weight: bold;
+            transition: color 0.3s;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        a:hover {
+            color: #d81b60;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Làng nghề truyền thống Bến Tre</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="products">
+        <h2>Làng nghề nổi bật</h2>
+        <div class="grid-container">
+            <div class="product">
+                <h3>Gốm sứ</h3>
+                <img src="img/gomsu2.jpg" alt="Gốm sứ">
+                <p>Nghề làm gốm ở Bến Tre là một trong những ngành nghề truyền thống nổi bật và gắn liền với văn hóa, lịch sử của vùng đất này...</p>
+                <ol>
+                    <p>Lịch sử lâu đời: Nghề làm gốm ở Bến Tre đã có từ rất lâu, ít nhất là từ thời kỳ phong kiến...</p>
+                    <p>Chất liệu đất: Bến Tre sở hữu nguồn đất sét chất lượng, rất thích hợp để làm gốm...</p>
+                    <p>Quy trình làm gốm: Quy trình làm gốm ở Bến Tre thường khá công phu...</p>
+                    <p>Sản phẩm đa dạng: Gốm Bến Tre không chỉ có các vật dụng sinh hoạt như chén, đĩa...</p>
+                    <p>Ảnh hưởng văn hóa: Nghề làm gốm ở Bến Tre là một phần của di sản văn hóa dân gian miền Tây...</p>
+                </ol>
+            </div>
+            <div class="product">
+                <h3>Đan tre</h3>
+                <img src="img/dantre2.jpg" alt="Dừa xiêm">
+                <p>Nghề đan tre ở Bến Tre là một nghề truyền thống lâu đời, gắn liền với đời sống của người dân nơi đây. Bến Tre, được biết đến là "xứ dừa", có nguồn tài nguyên tre dồi dào, tạo điều kiện thuận lợi cho sự phát triển của nghề đan tre.</p>
+                <p>Người dân ở Bến Tre chủ yếu đan các sản phẩm như giỏ, rổ, nón, thúng, bàn ghế, và nhiều vật dụng khác phục vụ nhu cầu sinh hoạt hàng ngày. Quá trình đan tre đòi hỏi sự khéo léo và tinh tế từ đôi tay của người thợ, khi phải lựa chọn và xử lý những cây tre sao cho phù hợp với từng sản phẩm.</p>
+                <p>Điều đặc biệt là nghề đan tre không chỉ đơn giản là một nghề thủ công, mà còn mang đậm tính nghệ thuật. Những sản phẩm đan tre từ Bến Tre không chỉ bền đẹp mà còn thể hiện sự sáng tạo và phong cách riêng biệt của từng người thợ. Các sản phẩm này không chỉ được tiêu thụ trong nước mà còn xuất khẩu ra nhiều quốc gia, góp phần nâng cao giá trị của sản phẩm thủ công Việt Nam.</p>
+                <p>Ngoài giá trị kinh tế, nghề đan tre còn giúp bảo tồn và phát huy những giá trị văn hóa truyền thống của người dân Bến Tre, đồng thời tạo công ăn việc làm cho nhiều gia đình, đặc biệt là ở các vùng nông thôn.</p>
+             </div>
+            <div class="product">
+                <h3>Thủ công mỹ nghệ</h3>
+                <img src="img/spdua.jpg" alt="Dầu dừa">
+                <p>Nghề làm đồ thủ công mỹ nghệ ở Bến Tre là một ngành nghề truyền thống, gắn liền với sự sáng tạo, khéo léo của người dân địa phương. Tại Bến Tre, các sản phẩm thủ công mỹ nghệ chủ yếu được làm từ nguyên liệu tự nhiên như dừa, tre, gỗ, mây, lá và đặc biệt là vỏ dừa. Đây là những vật liệu phong phú và dễ tìm thấy trong vùng đất này, tạo cơ hội cho người dân phát triển nghề thủ công.</p>
+                <p>Các sản phẩm thủ công mỹ nghệ ở Bến Tre rất đa dạng, từ những vật dụng trong gia đình như giỏ, rổ, đèn lồng, khay, đến các sản phẩm trang trí, quà lưu niệm hay đồ nội thất. Một trong những đặc trưng nổi bật là các sản phẩm làm từ vỏ dừa, như tượng dừa, bình hoa, và các sản phẩm đan lát, thể hiện sự khéo léo và tỉ mỉ của người thợ thủ công.</p>
+                <p>Nghề làm đồ thủ công mỹ nghệ không chỉ giúp bảo tồn những giá trị văn hóa truyền thống, mà còn mang lại nguồn thu nhập ổn định cho nhiều gia đình ở các vùng nông thôn Bến Tre. Những sản phẩm này không chỉ đáp ứng nhu cầu tiêu dùng trong nước mà còn được xuất khẩu ra nước ngoài, góp phần nâng cao giá trị của ngành thủ công mỹ nghệ Việt Nam.</p>
+                <p>Ngoài ra, nghề thủ công mỹ nghệ ở Bến Tre cũng góp phần phát triển du lịch, khi khách du lịch đến tham quan và mua sắm các sản phẩm đặc trưng của địa phương. Những làng nghề này đã trở thành điểm đến hấp dẫn cho những ai yêu thích sự tinh xảo, độc đáo trong các sản phẩm thủ công.</p>
+            </div>
+        </div>
+    </section>
+    
+    <a href="https://bentretoplist.com/top-7-dia-chi-ban-gom-su-my-nghe-o-ben-tre-dieu-khac-tinh-xao/">Gốm sứ : Xem thêm</a>
+    <a href="https://mttq.bentre.gov.vn/noi-dung/bao-ton-phat-trien-lang-nghe-thu-cong-truyen-thong-may-tre-dan-o-xa-phu-le-huyen-ba-tri-0">Đan tre: Xem thêm</a>
+    <a href="http://bentretrade.vn/mua-sam/danh-muc/banh-keo/thu-cong-my-nghe-tu-dua_150/">Đồ thủ công mỹ nghệ: Xem thêm</a>
+
+    <footer>
+        <p>&copy; 2025 Làng nghề truyền thống Bến Tre. Tất cả các quyền được bảo lưu.</p>
+    </footer>
+</body>
+</html>

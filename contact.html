@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Toàn bộ body */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #FFB6C1, #FFD700); /* Gradient đẹp mắt */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            padding: 50px 20px;
+            background: url('https://via.placeholder.com/1200x400/FFB6C1/000000?text=Chào+Mừng') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-bottom: 4px solid #4CAF50;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+            text-decoration: underline;
+        }
+
+        /* Container Form */
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: 0 auto;
+            animation: formFadeIn 1.2s ease-out;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+            transform: scale(1.02);
+        }
+
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 18px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #006400;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes formFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Flower animation */
+        .flower {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('https://www.svgrepo.com/show/308276/flower.svg') no-repeat center center;
+            background-size: contain;
+            animation: flowerAnim 15s infinite linear;
+            opacity: 0.8;
+        }
+
+        @keyframes flowerAnim {
+            0% {
+                top: -60px;
+                left: 100%;
+                opacity: 0.6;
+            }
+            50% {
+                top: 100%;
+                left: 50%;
+                opacity: 1;
+            }
+            100% {
+                top: -60px;
+                left: -60px;
+                opacity: 0.6;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Flower Background -->
+    <div class="flower"></div>
+    <div class="flower" style="animation-delay: 5s;"></div>
+
+    <header>
+        <h1>Làng nghề truyền thống Bến Tre - Liên hệ</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="product.html">Sản phẩm</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h1>Liên hệ với chúng tôi</h1>
+            <form action="submit_contact.php" method="POST">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Tin nhắn:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Gửi</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 Đặc sản xứ dừa Bến Tre</p>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cảm ơn</title>
+    <style>
+        /* Toàn bộ body */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #FFB6C1, #FFD700);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Container cho nội dung */
+        .container {
+            width: 100%;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        /* Form chứa nội dung Cảm ơn */
+        .message-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            animation: messageFadeIn 1s ease-out;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes messageFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Flower animation (same as in the contact page) */
+        .flower {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('https://www.svgrepo.com/show/308276/flower.svg') no-repeat center center;
+            background-size: contain;
+            animation: flowerAnim 15s infinite linear;
+            opacity: 0.8;
+        }
+
+        @keyframes flowerAnim {
+            0% {
+                top: -60px;
+                left: 100%;
+                opacity: 0.6;
+            }
+            50% {
+                top: 100%;
+                left: 50%;
+                opacity: 1;
+            }
+            100% {
+                top: -60px;
+                left: -60px;
+                opacity: 0.6;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Flower Background -->
+    <div class="flower"></div>
+    <div class="flower" style="animation-delay: 5s;"></div>
+
+    <div class="container">
+        <div class="message-container">
+            <h1>Cảm ơn bạn đã liên hệ với chúng tôi!</h1>
+            <p>Chúng tôi sẽ phản hồi lại bạn trong thời gian sớm nhất.</p>
+            <p><a href="index.html">Quay lại trang chủ</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
